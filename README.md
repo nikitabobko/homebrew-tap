@@ -1,17 +1,11 @@
-# Homebrew cask for AeroSpace
+# Homebrew tap repo for my software
 
-AeroSpace homepage: https://github.com/nikitabobko/AeroSpace
+## List of software
 
-## Install
-
-```
-brew install --cask nikitabobko/aerospace
-xattr -d com.apple.quarantine /Applications/AeroSpace.app
-```
+- [AeroSpace](https://github.com/nikitabobko/AeroSpace)
 
 ## Install from .rb file
 
 ```
-brew install -s ./aerospace.rb
+brew install -s ./path/to/formulae.rb
 ```
-
