@@ -1,5 +1,7 @@
 # Homebrew cask for AeroSpace
 
+AeroSpace homepage: https://github.com/nikitabobko/AeroSpace
+
 ## Install
 
 ```
