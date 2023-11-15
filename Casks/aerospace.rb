@@ -9,7 +9,9 @@ cask "aerospace" do
 
   auto_updates true
   depends_on macos: ">= :ventura" # macOS 13
-  depends_on formula: "aerospace-cli"
+  # Note: conflicts_with formula: is a stub and is not yet functional. :(
+  conflicts_with formula: "aerospace-cli"
 
   app "AeroSpace-v#{version}/AeroSpace.app"
+  binary "AeroSpace-v#{version}/aerospace"
 end
