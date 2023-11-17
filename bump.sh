@@ -17,3 +17,6 @@ sha=$(sha256sum .artifacts/AeroSpace-v$version.zip | awk '{print $1}')
 
 gsed -i "s/ sha256.*/ sha256 \"$sha\"/" ./Casks/aerospace.rb
 gsed -i "s/ version.*/ version \"$version\"/" ./Casks/aerospace.rb
+
+git add --all
+git commit -m "v$version"
