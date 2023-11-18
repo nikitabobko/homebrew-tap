@@ -1,6 +1,6 @@
 cask "aerospace" do
-  version "0.4.4-Beta"
-  sha256 "2e054c720173a8753ef341ff4c9f06099d4db35e8bb375d9d99da675a78fa210"
+  version "0.5.0-Beta"
+  sha256 "57ba13ed2e16c6247307979456196771f7c78e1a88286ec0cf001fa3b7bbad4b"
 
   url "https://github.com/nikitabobko/AeroSpace/releases/download/v#{version}/AeroSpace-v#{version}.zip"
   name "AeroSpace"
