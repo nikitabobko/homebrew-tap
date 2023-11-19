@@ -20,4 +20,4 @@ gsed -i "s/ version.*/ version \"$version\"/" ./Casks/aerospace.rb
 
 git add --all
 git commit -m "v$version"
-./test.sh
+./install.sh

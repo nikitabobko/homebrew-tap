@@ -17,4 +17,5 @@ pushd /opt/homebrew/Library/Taps/nikitabobko/homebrew-tap
     git checkout FETCH_HEAD
 popd
 
+rm ~/.bin/aerospace || true # Delete manually installed aerospace
 brew reinstall aerospace
