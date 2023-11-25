@@ -4,7 +4,7 @@ cask "aerospace" do
 
   url "https://github.com/nikitabobko/AeroSpace/releases/download/v#{version}/AeroSpace-v#{version}.zip"
   name "AeroSpace"
-  desc "AeroSpace is a tiling window manager for macOS"
+  desc "AeroSpace is an i3-like tiling window manager for macOS"
   homepage "https://github.com/nikitabobko/AeroSpace"
 
   auto_updates true
