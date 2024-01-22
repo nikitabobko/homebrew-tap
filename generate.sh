@@ -34,7 +34,6 @@ cask "aerospace" do
   desc "AeroSpace is an i3-like tiling window manager for macOS"
   homepage "https://github.com/nikitabobko/AeroSpace"
 
-  auto_updates true
   depends_on macos: ">= :ventura" # macOS 13
   # Note: conflicts_with formula: is a stub and is not yet functional. :(
   conflicts_with formula: "aerospace-cli"
