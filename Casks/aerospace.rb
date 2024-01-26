@@ -1,6 +1,6 @@
 cask "aerospace" do
-  version "0.8.1-Beta"
-  sha256 "c96bfc15be289fc1a0d5d2c943f6a36281eb1c9977d540f2938d4e38a52ebe45"
+  version "0.8.2-Beta"
+  sha256 "16c7c65869aadfb3ecc8f61cbd6ecb6007959b32faea6d42f2796aff2a2f3355"
 
   url "https://github.com/nikitabobko/AeroSpace/releases/download/v#{version}/AeroSpace-v#{version}.zip"
   name "AeroSpace"
@@ -15,6 +15,7 @@ cask "aerospace" do
   binary "AeroSpace-v#{version}/bin/aerospace"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close-all-windows-but-current.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-debug-windows.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-enable.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-exec-and-forget.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-flatten-workspace-tree.1"
