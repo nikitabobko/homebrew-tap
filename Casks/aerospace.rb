@@ -11,6 +11,13 @@ cask "aerospace" do
   # Note: conflicts_with formula: is a stub and is not yet functional. :(
   conflicts_with formula: "aerospace-cli"
 
+  def env_set
+    ENV["HOMEBREW_CASK_OPTS"] = "--no-quarantine"
+
+  end
+
+  env_set
+  
   app "AeroSpace-v#{version}/AeroSpace.app"
   binary "AeroSpace-v#{version}/bin/aerospace"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close-all-windows-but-current.1"
