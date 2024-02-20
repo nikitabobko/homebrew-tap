@@ -9,7 +9,13 @@ cask "aerospace" do
 
   depends_on macos: ">= :ventura" # macOS 13
   # Note: conflicts_with formula: is a stub and is not yet functional. :(
+  # https://github.com/Homebrew/homebrew-cask/issues/12822
   conflicts_with formula: "aerospace-cli"
+
+  postflight do
+    system "xattr -d com.apple.quarantine #{staged_path}/AeroSpace-v#{version}/bin/aerospace"
+    system "xattr -d com.apple.quarantine /Applications/AeroSpace.app"
+  end
 
   app "AeroSpace-v#{version}/AeroSpace.app"
   binary "AeroSpace-v#{version}/bin/aerospace"
