@@ -15,6 +15,9 @@ cask "aerospace" do
   postflight do
     system "xattr -d com.apple.quarantine #{staged_path}/AeroSpace-v#{version}/bin/aerospace"
     system "xattr -d com.apple.quarantine /Applications/AeroSpace.app"
+
+    system "codesign --force -s - #{staged_path}/AeroSpace-v#{version}/bin/aerospace"
+    system "codesign --force -s - /Applications/AeroSpace.app"
   end
 
   app "AeroSpace-v#{version}/AeroSpace.app"
