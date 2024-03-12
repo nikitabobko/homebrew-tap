@@ -1,6 +1,6 @@
 cask "aerospace" do
-  version "0.8.7-Beta"
-  sha256 "ff3ce42c8713d6ccb66963dafce77fd7a65da60c55db0d8196ddab076982f3dd"
+  version "0.9.0-Beta"
+  sha256 "03ceee9158c773b57bf95e1626d8055d43e6f316189eca45410e3d7970123fec"
 
   url "https://github.com/nikitabobko/AeroSpace/releases/download/v#{version}/AeroSpace-v#{version}.zip"
   name "AeroSpace"
@@ -15,9 +15,6 @@ cask "aerospace" do
   postflight do
     system "xattr -d com.apple.quarantine #{staged_path}/AeroSpace-v#{version}/bin/aerospace"
     system "xattr -d com.apple.quarantine /Applications/AeroSpace.app"
-
-    system "codesign --force -s - #{staged_path}/AeroSpace-v#{version}/bin/aerospace"
-    system "codesign --force -s - /Applications/AeroSpace.app"
   end
 
   app "AeroSpace-v#{version}/AeroSpace.app"
@@ -28,15 +25,20 @@ cask "aerospace" do
   manpage "AeroSpace-v#{version}/manpage/aerospace-enable.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-exec-and-forget.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-flatten-workspace-tree.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-focus-monitor.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-focus.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-fullscreen.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-join-with.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-layout.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-list-apps.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-list-exec-env-vars.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-list-monitors.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-list-windows.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-list-workspaces.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-macos-native-fullscreen.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-macos-native-minimize.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-mode.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-move-node-to-monitor.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-node-to-workspace.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-workspace-to-monitor.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move.1"
