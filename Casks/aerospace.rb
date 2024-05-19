@@ -1,6 +1,6 @@
 cask "aerospace" do
-  version "0.10.0-Beta"
-  sha256 "ec4390ce6c51246287ca67cecdb19933092041eb7caa40064fd95119dcea829c"
+  version "0.11.0-Beta"
+  sha256 "e0b8518e1c2234ca4fa0db7fd0b557a5a2285634147dd03360d870b068fc91bb"
 
   url "https://github.com/nikitabobko/AeroSpace/releases/download/v#{version}/AeroSpace-v#{version}.zip"
   name "AeroSpace"
@@ -21,6 +21,7 @@ cask "aerospace" do
   binary "AeroSpace-v#{version}/bin/aerospace"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close-all-windows-but-current.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-config.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-debug-windows.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-enable.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-exec-and-forget.1"
@@ -45,6 +46,7 @@ cask "aerospace" do
   manpage "AeroSpace-v#{version}/manpage/aerospace-reload-config.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-resize.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-split.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-trigger-binding.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-workspace-back-and-forth.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-workspace.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace.1"
