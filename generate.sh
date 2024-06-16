@@ -46,6 +46,14 @@ cask "aerospace" do
 
   app "AeroSpace-v#{version}/AeroSpace.app"
   binary "AeroSpace-v#{version}/bin/aerospace"
+
+  binary "AeroSpace-v#{version}/shell-completion/zsh/_aerospace",
+      target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_aerospace"
+  binary "AeroSpace-v#{version}/shell-completion/bash/aerospace",
+      target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/aerospace"
+  binary "AeroSpace-v#{version}/shell-completion/fish/aerospace.fish",
+      target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/aerospace.fish"
+
 $manpages
 end
 EOF
