@@ -1,6 +1,6 @@
 cask "aerospace" do
-  version "0.12.0-Beta"
-  sha256 "8801301b5eac72faa6dae04797cb7680eb175dfd23c8a0cd7e90a1bbb5811257"
+  version "0.13.0-Beta"
+  sha256 "0c044c9d595f28b889b71b5a3d9ef8d731319d75fcfa55ea8dbfdb431b0e7da4"
 
   url "https://github.com/nikitabobko/AeroSpace/releases/download/v#{version}/AeroSpace-v#{version}.zip"
   name "AeroSpace"
@@ -27,6 +27,7 @@ cask "aerospace" do
   binary "AeroSpace-v#{version}/shell-completion/fish/aerospace.fish",
       target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/aerospace.fish"
 
+  manpage "AeroSpace-v#{version}/manpage/aerospace-balance-sizes.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close-all-windows-but-current.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-config.1"
@@ -34,6 +35,7 @@ cask "aerospace" do
   manpage "AeroSpace-v#{version}/manpage/aerospace-enable.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-exec-and-forget.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-flatten-workspace-tree.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-focus-back-and-forth.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-focus-monitor.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-focus.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-fullscreen.1"
@@ -47,6 +49,7 @@ cask "aerospace" do
   manpage "AeroSpace-v#{version}/manpage/aerospace-macos-native-fullscreen.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-macos-native-minimize.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-mode.1"
+  manpage "AeroSpace-v#{version}/manpage/aerospace-move-mouse.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-node-to-monitor.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-node-to-workspace.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-workspace-to-monitor.1"
