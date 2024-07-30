@@ -1,6 +1,6 @@
-cask "aerospace" do
-  version "0.13.3-Beta"
-  sha256 "35e407b6dd06b85aa8951365505d42e772f71ec62b82ab7fa1821991f6645816"
+cask "aerospace@0.12.0" do
+  version "0.12.0-Beta"
+  sha256 "8801301b5eac72faa6dae04797cb7680eb175dfd23c8a0cd7e90a1bbb5811257"
 
   url "https://github.com/nikitabobko/AeroSpace/releases/download/v#{version}/AeroSpace-v#{version}.zip"
   name "AeroSpace"
@@ -9,6 +9,7 @@ cask "aerospace" do
 
   depends_on macos: ">= :ventura" # macOS 13
   conflicts_with cask: %w[
+    aerospace
     aerospace@0.12.0
   ]
 
@@ -27,7 +28,6 @@ cask "aerospace" do
   binary "AeroSpace-v#{version}/shell-completion/fish/aerospace.fish",
       target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/aerospace.fish"
 
-  manpage "AeroSpace-v#{version}/manpage/aerospace-balance-sizes.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close-all-windows-but-current.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-close.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-config.1"
@@ -35,7 +35,6 @@ cask "aerospace" do
   manpage "AeroSpace-v#{version}/manpage/aerospace-enable.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-exec-and-forget.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-flatten-workspace-tree.1"
-  manpage "AeroSpace-v#{version}/manpage/aerospace-focus-back-and-forth.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-focus-monitor.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-focus.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-fullscreen.1"
@@ -49,7 +48,6 @@ cask "aerospace" do
   manpage "AeroSpace-v#{version}/manpage/aerospace-macos-native-fullscreen.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-macos-native-minimize.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-mode.1"
-  manpage "AeroSpace-v#{version}/manpage/aerospace-move-mouse.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-node-to-monitor.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-node-to-workspace.1"
   manpage "AeroSpace-v#{version}/manpage/aerospace-move-workspace-to-monitor.1"
