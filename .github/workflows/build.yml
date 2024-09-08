@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'bobko/**'
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build
+    # https://github.com/actions/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md
+    runs-on: macos-14
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./run-tests.sh
