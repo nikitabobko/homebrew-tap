@@ -6,12 +6,20 @@ set -o pipefail # Any command failed in the pipe fails the whole pipe
 # cd "$(dirname "$0")"
 cd "$(dirname "$0")"
 
-brew=$(which brew)
-export PATH="/bin:/usr/bin"
-
 cd ./Casks
 
 for file in *; do
-    eval "$brew" install --cask "./$file"
-    eval "$brew" uninstall "./$file"
+    echo '#############################################################################################################'
+    echo "$file"
+    brew install --cask "./$file"
+    version=$(grep '^\s*version' "$file" | head -1 | grep --only-matching -E '[0-9.]+')
+    if aerospace -v | grep -q --fixed-strings "$version"; then
+        true
+    else
+        echo "Expected version: $version"
+        echo "Actual:"
+        aerospace -v
+        exit 1
+    fi
+    brew uninstall "./$file"
 done
