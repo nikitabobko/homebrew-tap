@@ -23,5 +23,5 @@ for file in *; do
         aerospace -v
         exit 1
     fi
-    brew uninstall "./$file"
+    brew uninstall "${file//.rb/}"
 done
