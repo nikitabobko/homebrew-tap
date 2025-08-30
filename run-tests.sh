@@ -23,5 +23,5 @@ for file in *; do
         aerospace -v
         exit 1
     fi
-    brew uninstall "${file//.rb/}"
+    brew uninstall "nikitabobko/local-tap/${file//.rb/}"
 done
