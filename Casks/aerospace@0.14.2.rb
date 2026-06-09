@@ -7,7 +7,7 @@ cask "aerospace@0.14.2" do
   desc "AeroSpace is an i3-like tiling window manager for macOS"
   homepage "https://github.com/nikitabobko/AeroSpace"
 
-  depends_on macos: ">= :ventura" # macOS 13
+  depends_on macos: :ventura # macOS 13
 
   postflight do
     system "xattr -d com.apple.quarantine #{staged_path}/AeroSpace-v#{version}/bin/aerospace"
